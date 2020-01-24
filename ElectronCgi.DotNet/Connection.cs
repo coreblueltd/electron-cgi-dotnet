@@ -10,7 +10,7 @@ using Serilog;
 
 namespace ElectronCgi.DotNet
 {
-    public class Connection
+    public class Connection : IConnection
     {
         private readonly IChannel _channel;
         private readonly IMessageDispatcher _messageDispatcher;
