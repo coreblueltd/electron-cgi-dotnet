@@ -8,7 +8,8 @@ namespace ElectronCgi.DotNet
     {
         private readonly static JsonSerializerSettings _jsonSerializerSettings = new JsonSerializerSettings
         {
-            ContractResolver = new CamelCasePropertyNamesContractResolver()
+            ContractResolver = new CamelCasePropertyNamesContractResolver(),
+            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
         };
 
         public object DeserialiseArguments(string args, Type argumentsType)
